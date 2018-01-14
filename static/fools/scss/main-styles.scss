@@ -1,0 +1,28 @@
+@import "colors/colors.scss";
+@import "fonts/fonts.scss";
+
+html {
+  background-color: $tawney-yellow;
+}
+
+header {
+  .header__site-title {
+    font-family: $limelight-sans;
+  }
+}
+
+section {
+  font-family: $comfortaa-sans;
+  .header__section_header {
+    @include comfortaa-bold-sans;
+  }
+}
+
+ul.list--no-bullet {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.header__site-subtitle {
+  font-family: $comfortaa-sans;
+}
