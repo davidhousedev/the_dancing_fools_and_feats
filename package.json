@@ -1,0 +1,23 @@
+{
+  "name": "the_dancing_fools_and_feats",
+  "version": "0.0.1",
+  "description": "Homepage for The Dancing Fools and Dancing Feats",
+  "main": "Makefile",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com-davidhousedev:davidhousedev/the_dancing_fools_and_feats.git"
+  },
+  "author": "David House",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "path": "^0.12.7"
+  }
+}
