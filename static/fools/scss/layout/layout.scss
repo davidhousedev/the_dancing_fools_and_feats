@@ -1,1 +1,29 @@
-$gutter-size: 2.5rem;
+$gutter-size: 1rem;
+$head-gutter: 0.5rem;
+
+// Responsive iframe css found here:
+// https://benmarshall.me/responsive-iframes/
+.window__container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  &--16x9 {
+    padding-bottom: 56.25%;
+  }
+
+  // If necessary, also implement this option
+  //&--4x3 {
+  //  padding-bottom: 75%;
+  //}
+}
+
+
+
+.window__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// End responseive iframe css

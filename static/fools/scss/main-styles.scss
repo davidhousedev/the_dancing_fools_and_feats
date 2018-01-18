@@ -2,28 +2,30 @@
 @import "fonts/fonts.scss";
 @import "layout/layout.scss";
 
+
 body {
-  background-color: $tawney-yellow;
+  max-width: 100%;
+  background-color: $butter-yellow;
   display: grid;
-  grid-template-columns: $gutter-size [start-main] auto [end-main] $gutter-size;
-  grid-template-rows: auto;
+  grid-template-columns: $head-gutter [left-head-gutter] $head-gutter [start-main] auto [end-main] $head-gutter [right-head-gutter] $head-gutter;
+  grid-template-rows: [start-head] auto [start-main] auto [end-main];
+  justify-content: stretch;
 }
 
 header {
   .header__site-title {
     font-family: $limelight-sans;
+    font-size: 3rem;
   }
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-column: left-head-gutter / right-head-gutter;
+  grid-row: start-head / start-main;
+
+  text-align: center;
 }
 
 main {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-column: start-main / end-main;
+  grid-row: start-main / end-main;
 }
 
 section {
