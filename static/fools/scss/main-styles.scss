@@ -1,14 +1,29 @@
 @import "colors/colors.scss";
 @import "fonts/fonts.scss";
+@import "layout/layout.scss";
 
-html {
+body {
   background-color: $tawney-yellow;
+  display: grid;
+  grid-template-columns: $gutter-size [start-main] auto [end-main] $gutter-size;
+  grid-template-rows: auto;
 }
 
 header {
   .header__site-title {
     font-family: $limelight-sans;
   }
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+main {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 section {
