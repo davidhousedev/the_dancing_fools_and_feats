@@ -30,7 +30,7 @@ const img_sizes = {
     xs: 200,
     sm: 400,
     md: 800,
-    lg: 1200,
+    lg: 1600,
     xlg: 2000
 };
 
