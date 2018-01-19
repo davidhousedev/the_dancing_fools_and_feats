@@ -2,25 +2,54 @@
 @import "fonts/fonts.scss";
 @import "layout/layout.scss";
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   max-width: 100%;
   background-color: $butter-yellow;
   display: grid;
-  grid-template-columns: $head-gutter [left-head-gutter] $head-gutter [start-main] auto [end-main] $head-gutter [right-head-gutter] $head-gutter;
+  grid-template-columns: [left-edge] $head-gutter [left-head-gutter] $head-gutter [start-main] auto [end-main] $head-gutter [right-head-gutter] $head-gutter [right-edge];
   grid-template-rows: [start-head] auto [start-main] auto [end-main];
+  grid-gap: 0.3rem;
   justify-content: stretch;
 }
 
 header {
+  background:
+    url("../img/dist/sm/fools_header_banner.jpg") no-repeat center,
+    $butter-yellow repeat;
+  background-size: 800px auto, contain;
+
+  color: white;
+  text-align: center;
   .header__site-title {
     font-family: $limelight-sans;
-    font-size: 3rem;
+    font-size: 5rem;
   }
-  grid-column: left-head-gutter / right-head-gutter;
-  grid-row: start-head / start-main;
 
-  text-align: center;
+  grid-column: left-edge / right-edge;
+  grid-row: start-head / start-main;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image--background {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+
+}
+
+.image--full-width {
+  grid-column: left-edge / right-edge;
 }
 
 main {
