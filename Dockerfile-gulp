@@ -1,5 +1,9 @@
 FROM node:latest
 
+RUN apt-get update && \
+    apt-get install -y imagemagick graphicsmagick && \
+    apt-get clean
+
 WORKDIR /project
 
 ADD ./package.json ./
