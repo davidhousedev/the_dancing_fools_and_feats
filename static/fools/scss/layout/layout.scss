@@ -1,6 +1,10 @@
 $gutter-size: 1rem;
 $head-gutter: 0.5rem;
 
+$banner-md: 800px;
+$banner-lg: 1200px;
+$banner-xlg: 2000px;
+
 @mixin section-padding {
   padding: 1rem 0;
 }
