@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: $comfortaa-sans;
 }
 
 body {
@@ -13,18 +14,18 @@ body {
   background-color: $butter-yellow;
   display: grid;
   grid-template-columns: [left-edge] $head-gutter [left-head-gutter] $head-gutter [start-main] auto [end-main] $head-gutter [right-head-gutter] $head-gutter [right-edge];
-  grid-template-rows: [start-head] auto [start-main] auto [end-main];
-  grid-gap: 0.3rem;
+  grid-template-rows: [start-head] auto [start-nav] auto [start-main] auto [end-main];
   justify-content: stretch;
 }
 
 header {
+  @include section-padding;
   background:
     url("../img/dist/sm/fools_header_banner.jpg") no-repeat center,
     $butter-yellow repeat;
   background-size: 800px auto, contain;
 
-  color: white;
+  color: $butter-yellow;
   text-align: center;
   .header__site-title {
     font-family: $limelight-sans;
@@ -32,7 +33,32 @@ header {
   }
 
   grid-column: left-edge / right-edge;
-  grid-row: start-head / start-main;
+  grid-row: start-head / start-nav;
+}
+
+nav {
+  padding: 1rem;
+  grid-column: left-edge / right-edge;
+  grid-row: start-nav / start-main;
+  justify-self: center;
+  background-color: darkblue;
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $butter-yellow;
+    li {
+      padding-right: 0.5rem;
+      display: inline-flex;
+
+    }
+    :not(:last-child) {
+      &:after {
+        content: " | ";
+        padding-left: 0.5rem;
+      }
+    }
+  }
 }
 
 img {
@@ -58,7 +84,7 @@ main {
 }
 
 section {
-  font-family: $comfortaa-sans;
+  @include section-padding;
   .header__section_header {
     @include comfortaa-bold-sans;
   }

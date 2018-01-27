@@ -1,6 +1,10 @@
 $gutter-size: 1rem;
 $head-gutter: 0.5rem;
 
+@mixin section-padding {
+  padding: 1rem 0;
+}
+
 // Responsive iframe css found here:
 // https://benmarshall.me/responsive-iframes/
 .window__container {
