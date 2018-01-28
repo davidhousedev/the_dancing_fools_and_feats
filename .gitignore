@@ -38,7 +38,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
+# dist/  # Temporarily disabled while hosting on github pages
 eggs/
 lib/
 lib64/
@@ -133,6 +133,6 @@ local.properties
 node_modules/
 
 # frontend
-css
+# css  # Temporarily disabled while hosting on github pages
 package-lock.json
-dist
+# dist  # Temporarily disabled while hosting on github pages
