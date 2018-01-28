@@ -9,6 +9,10 @@
   font-family: $comfortaa-sans;
 }
 
+p {
+  line-height: 1.1rem;
+}
+
 body {
   max-width: 100%;
   background-color: $butter-yellow;
@@ -23,19 +27,19 @@ header {
   @media (max-width: $banner-md) {
     background:
       url("../img/dist/md/fools_header_banner.jpg") no-repeat center,
-      $butter-yellow repeat;
+      $dark-navy repeat;
     background-size: $banner-md auto, contain;
   }
   @media (min-width: $banner-md) and (max-width: $banner-lg) {
     background:
       url("../img/dist/lg/fools_header_banner.jpg") no-repeat center,
-      $butter-yellow repeat;
+      $dark-navy repeat;
     background-size: 1200px auto, contain;
   }
   @media (min-width: $banner-lg) {
     background:
       url("../img/dist/xlg/fools_header_banner.jpg") no-repeat center,
-      $butter-yellow repeat;
+      $dark-navy repeat;
     background-size: 100% auto, cover;
   }
 
@@ -58,7 +62,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: darkblue;
+  background-color: $dark-navy;
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -114,4 +118,16 @@ ul.list--no-bullet {
 
 .header__site-subtitle {
   font-family: $comfortaa-sans;
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.icon {
+  path {
+    fill: $off-white;
+  }
+  height: 5rem;
+  width: 5rem;
 }
