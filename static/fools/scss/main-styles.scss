@@ -23,7 +23,7 @@ h2, p {
 }
 
 h2 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   font-size: 2.2rem;
   @include header-bold;
@@ -36,6 +36,10 @@ body {
   grid-template-columns: [left-edge] $gutter-size [start-main] auto [end-main] $gutter-size [right-edge];
   grid-template-rows: [start-head] auto [start-nav] auto [start-main] auto [end-main];
   justify-content: stretch;
+
+  section:last-of-type {
+    margin-bottom: 2rem;
+  }
 }
 
 header {
