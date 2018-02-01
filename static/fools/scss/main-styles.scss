@@ -1,6 +1,6 @@
-@import "colors/colors.scss";
-@import "fonts/fonts.scss";
-@import "layout/layout.scss";
+@import "colors/colors";
+@import "fonts/fonts";
+@import "layout/layout";
 
 * {
   box-sizing: border-box;
@@ -33,7 +33,7 @@ body {
   max-width: 100%;
   background-color: $butter-yellow;
   display: grid;
-  grid-template-columns: [left-edge] $head-gutter [left-head-gutter] $head-gutter [start-main] auto [end-main] $head-gutter [right-head-gutter] $head-gutter [right-edge];
+  grid-template-columns: [left-edge] $gutter-size [start-main] auto [end-main] $gutter-size [right-edge];
   grid-template-rows: [start-head] auto [start-nav] auto [start-main] auto [end-main];
   justify-content: stretch;
 }
@@ -70,6 +70,8 @@ header {
   grid-row: start-head / start-nav;
 }
 
+$nav-separator: "|";
+
 nav {
   padding: 1rem;
   grid-column: left-edge / right-edge;
@@ -85,14 +87,18 @@ nav {
     justify-content: center;
     color: $off-white;
     li {
+      &:after {
+        content: $nav-separator;
+        padding-left: 0.5rem;
+      }
       padding-right: 0.5rem;
       display: inline-flex;
       align-self: center;
     }
-    :not(:last-child) {
-      &:after {
-        content: "|";
-        padding-left: 0.5rem;
+    :first-child {
+      &:before {
+        content: $nav-separator;
+        padding-right: 0.5rem;
       }
     }
   }
