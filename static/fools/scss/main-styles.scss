@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $comfortaa-sans;
+  font-family: $paragraph-font;
 }
 
 p, li {
@@ -26,7 +26,7 @@ h2 {
   margin-top: 1rem;
   text-align: center;
   font-size: 2.2rem;
-  font-style: italic;
+  @include header-bold;
 }
 
 body {
@@ -62,7 +62,7 @@ header {
   color: $butter-yellow;
   text-align: center;
   .header__site-title {
-    font-family: $limelight-sans;
+    font-family: $title-font;
     font-size: 5rem;
   }
 
@@ -73,7 +73,7 @@ header {
 $nav-separator: "|";
 
 nav {
-  padding: 1rem;
+  padding: 1rem 0;
   grid-column: left-edge / right-edge;
   grid-row: start-nav / start-main;
   justify-self: stretch;
@@ -126,20 +126,13 @@ main {
   grid-row: start-main / end-main;
 }
 
-section {
-  @include section-padding;
-  .header__section_header {
-    @include comfortaa-bold-sans;
-  }
-}
-
 ul.list--no-bullet {
   padding-left: 0;
   list-style-type: none;
 }
 
 .header__site-subtitle {
-  font-family: $comfortaa-sans;
+  font-family: $header-font;
 }
 
 .section__this_week {
@@ -147,10 +140,6 @@ ul.list--no-bullet {
 
     margin-bottom: 1rem;
   }
-}
-
-.text--italic {
-  font-style: italic;
 }
 
 .icon {

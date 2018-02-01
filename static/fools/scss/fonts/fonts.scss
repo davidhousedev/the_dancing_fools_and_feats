@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Limelight');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight|Satisfy:400,700');
 
-$comfortaa-sans: 'Comfortaa', sans-serif;
-@mixin comfortaa-bold-sans {
-  font-family: 'Comfortaa', sans-serif;
+$header-font: 'Satisfy', cursive;
+@mixin header-bold {
+  font-family: 'Satisfy', cursive;
   font-weight: 700;
 }
-$limelight-sans: 'Limelight', sans-serif;
+$title-font: 'Limelight', sans-serif;
+$paragraph-font: 'Josefin Sans', sans-serif
