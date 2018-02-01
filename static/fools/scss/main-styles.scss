@@ -40,18 +40,38 @@ body {
 
 header {
   @include section-padding;
+  /* Medium screens */
   @media (max-width: $banner-md) {
     background:
       url("../img/dist/md/fools_header_banner.jpg") no-repeat center,
       $dark-navy repeat;
     background-size: $banner-md auto, contain;
   }
+  @media
+  (max-width: $banner-md) and
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+    background:
+      url("../img/dist/lg/fools_header_banner.jpg") no-repeat center,
+      $dark-navy repeat;
+    background-size: $banner-md auto, contain;
+  }
+  /* Large Screens */
   @media (min-width: $banner-md) and (max-width: $banner-lg) {
     background:
       url("../img/dist/lg/fools_header_banner.jpg") no-repeat center,
       $dark-navy repeat;
-    background-size: 1200px auto, contain;
+    background-size: $banner-lg auto, contain;
   }
+  @media (min-width: $banner-md) and (max-width: $banner-lg) and
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+    background:
+      url("../img/dist/xlg/fools_header_banner.jpg") no-repeat center,
+      $dark-navy repeat;
+    background-size: $banner-lg auto, contain;
+  }
+  /* Extra large screens */
   @media (min-width: $banner-lg) {
     background:
       url("../img/dist/xlg/fools_header_banner.jpg") no-repeat center,
