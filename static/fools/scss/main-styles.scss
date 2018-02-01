@@ -148,6 +148,14 @@ ul.list--no-bullet {
   font-family: $header-font;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  div {
+    width: 50%;
+  }
+}
+
 .section__this_week {
   img {
 
