@@ -17,6 +17,9 @@ $banner-xlg: 2000px;
   &--16x9 {
     padding-bottom: 56.25%;
   }
+  &--square {
+    padding-bottom: 100%;
+  }
 
   // If necessary, also implement this option
   //&--4x3 {
