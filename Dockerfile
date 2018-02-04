@@ -16,3 +16,7 @@ RUN rm /tmp/*
 
 WORKDIR /app
 ADD ./the_dancing_fools_and_feats/ .
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
