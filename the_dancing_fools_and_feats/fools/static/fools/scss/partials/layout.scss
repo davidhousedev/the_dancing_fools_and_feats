@@ -1,11 +1,31 @@
-$gutter-size: 1rem;
-
-$banner-md: 800px;
-$banner-lg: 1200px;
-$banner-xlg: 2000px;
+@import 'base';
 
 @mixin section-padding {
   padding: 1rem 0;
+}
+
+body {
+  max-width: 100%;
+  background-color: $butter-yellow;
+  display: grid;
+  grid-template-columns: [left-edge] $gutter-size [start-main] auto [end-main] $gutter-size [right-edge];
+  grid-template-rows: [start-head] auto [start-nav] auto [start-main] auto [end-main];
+  justify-content: stretch;
+
+  section:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+main {
+  grid-column: start-main / end-main;
+  grid-row: start-main / end-main;
+}
+
+.section__this_week {
+  img {
+    margin-bottom: 1rem;
+  }
 }
 
 // Responsive iframe css found here:
@@ -26,8 +46,6 @@ $banner-xlg: 2000px;
   //  padding-bottom: 75%;
   //}
 }
-
-
 
 .window__container iframe {
   position: absolute;

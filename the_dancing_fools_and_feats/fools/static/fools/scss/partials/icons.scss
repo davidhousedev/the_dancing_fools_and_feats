@@ -1,0 +1,17 @@
+@import 'base';
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  div {
+    width: 50%;
+  }
+}
+
+.icon {
+  path {
+    fill: $off-white;
+  }
+  height: 5rem;
+  width: 5rem;
+}

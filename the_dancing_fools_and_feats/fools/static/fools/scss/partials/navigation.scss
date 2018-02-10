@@ -1,0 +1,35 @@
+@import 'base';
+
+$nav-separator: "|";
+
+nav {
+  padding: 0.5rem 0.5rem;
+  grid-column: left-edge / right-edge;
+  grid-row: start-nav / start-main;
+  justify-self: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: $dark-navy;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $off-white;
+    li {
+      &:after {
+        content: $nav-separator;
+        padding-left: 0.5rem;
+      }
+      padding-right: 0.5rem;
+      display: inline-flex;
+      align-self: center;
+    }
+    :first-child {
+      &:before {
+        content: $nav-separator;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

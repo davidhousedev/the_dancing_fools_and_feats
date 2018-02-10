@@ -1,0 +1,56 @@
+@import 'base';
+
+header {
+  @include section-padding;
+
+  $header-img: 'fools_header_banner.jpg';
+  @media (max-width: $banner-md) {
+    background-image: url("../img/dist/md/#{$header-img}");
+    background-image:
+      -webkit-image-set(
+        url("../img/dist/md/#{$header-img}") 1x,
+        url("../img/dist/lg/#{$header-img}") 2x
+      );
+    background-image:
+      image-set(
+        url("../img/dist/md/#{$header-img}") 1x,
+        url("../img/dist/lg/#{$header-img}") 2x
+      );
+    background-size: $banner-md auto;
+  }
+  @media (min-width: $banner-md) and (max-width: $banner-lg) {
+    background-image: url("../img/dist/lg/#{$header-img}");
+    background-image:
+      -webkit-image-set(
+        url("../img/dist/lg/#{$header-img}") 1x,
+        url("../img/dist/xlg/#{$header-img}") 2x
+      );
+    background-image:
+      image-set(
+        url("../img/dist/lg/#{$header-img}") 1x,
+        url("../img/dist/xlg/#{$header-img}") 2x
+      );
+    background-size: $banner-lg auto;
+  }
+  @media (min-width: $banner-lg) {
+    background-image: url("../img/dist/xlg/#{$header-img}");
+    background-size: 100% auto;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: $pure-white;
+  text-align: center;
+  .header__site-title {
+    font-family: $title-font;
+    font-size: 4rem;
+  }
+
+  .header__site-subtitle {
+    font-size: 1.5rem;
+  }
+
+  grid-column: left-edge / right-edge;
+  grid-row: start-head / start-nav;
+}

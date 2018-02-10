@@ -1,0 +1,26 @@
+// Base colors
+$butter-yellow: #fff6e9ff;
+$pure-white: #ffffff;
+$off-black: #211f30;
+$off-white: #f0f0f0;
+$dark-navy: #232A5C;
+
+$image-path: '../img/dist';  // Path from css location to image location
+
+// Layout
+$gutter-size: 1rem;
+
+$banner-md: 800px;
+$banner-lg: 1200px;
+$banner-xlg: 2000px;
+
+// Base Fonts
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight|Satisfy:400,700');
+
+$header-font: 'Satisfy', cursive;
+@mixin header-bold {
+  font-family: 'Satisfy', cursive;
+  font-weight: 700;
+}
+$title-font: 'Limelight', sans-serif;
+$paragraph-font: 'Josefin Sans', sans-serif
