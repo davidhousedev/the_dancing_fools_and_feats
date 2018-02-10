@@ -4,6 +4,7 @@ $nav-separator: "|";
 
 nav {
   padding: 0.5rem 0.5rem;
+  margin-bottom: 2rem;
   grid-column: left-edge / right-edge;
   grid-row: start-nav / start-main;
   justify-self: stretch;

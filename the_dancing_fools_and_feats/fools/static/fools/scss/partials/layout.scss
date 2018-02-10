@@ -1,5 +1,8 @@
 @import 'base';
 
+$gutter-size: 1rem;
+$max-content-width: 1125px;
+
 @mixin section-padding {
   padding: 1rem 0;
 }
@@ -8,8 +11,36 @@ body {
   max-width: 100%;
   background-color: $butter-yellow;
   display: grid;
-  grid-template-columns: [left-edge] $gutter-size [start-main] auto [end-main] $gutter-size [right-edge];
-  grid-template-rows: [start-head] auto [start-nav] auto [start-main] auto [end-main];
+  grid-template-columns:
+    [left-edge] $gutter-size
+    [start-main] auto [end-main]
+    $gutter-size [right-edge];
+  @media (min-width: 400px) {
+    $gutter-size: 2rem;
+    grid-template-columns:
+      [left-edge] $gutter-size
+      [start-main] auto [end-main]
+      $gutter-size [right-edge];
+  }
+  @media (min-width: 820px) {
+    $gutter-size: auto;
+    grid-template-columns:
+      [left-edge] $gutter-size
+      [start-main] 800px [end-main]
+      $gutter-size [right-edge];
+  }
+  @media (min-width: 1200px) {
+    $gutter-size: auto;
+    grid-template-columns:
+      [left-edge] $gutter-size
+      [start-main] $max-content-width [end-main]
+      $gutter-size [right-edge];
+  }
+  grid-template-rows:
+    [start-head] auto
+    [start-nav] auto
+    [start-main] auto
+    [end-main] 2rem [end-page];
   justify-content: stretch;
 
   section:last-of-type {
@@ -20,6 +51,52 @@ body {
 main {
   grid-column: start-main / end-main;
   grid-row: start-main / end-main;
+}
+
+#main-fools {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "dance-info"
+    "this-week"
+    "who-we-are"
+    "west-coast-swing"
+    "location";
+
+  @media (min-width: 600px) {
+    grid-template-areas:
+      "dance-info this-week"
+      "who-we-are this-week"
+      "west-coast-swing west-coast-swing"
+      "location location";
+  }
+  @media (min-width: 700px) {
+    grid-template-areas:
+      "dance-info this-week"
+      "who-we-are this-week"
+      "west-coast-swing location";
+  }
+}
+
+
+.section__dance_info {
+  grid-area: dance-info;
+}
+
+.section__this_week{
+  grid-area: this-week;
+}
+
+.section__who_we_are {
+  grid-area: who-we-are;
+}
+
+.section__west_coast_swing {
+  grid-area: west-coast-swing;
+}
+
+.section__location {
+  grid-area: location;
 }
 
 .section__this_week {
