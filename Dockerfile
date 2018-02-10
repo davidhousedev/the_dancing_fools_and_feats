@@ -7,7 +7,7 @@ RUN apk update && \
 
 # Install python packages
 WORKDIR /tmp
-ADD ./requirements.in .
+ADD ./the_dancing_fools_and_feats/requirements.in .
 RUN pip install pip-tools
 RUN pip-compile
 RUN pip uninstall pip-tools -y
