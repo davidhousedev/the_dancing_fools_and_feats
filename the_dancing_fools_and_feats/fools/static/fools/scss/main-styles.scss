@@ -44,44 +44,43 @@ body {
 
 header {
   @include section-padding;
-  /* Medium screens */
+
+  $header-img: 'fools_header_banner.jpg';
   @media (max-width: $banner-md) {
-    background:
-      url("../img/dist/md/fools_header_banner.jpg") no-repeat center,
-      $dark-navy repeat;
-    background-size: $banner-md auto, contain;
+    background-image: url("../img/dist/md/#{$header-img}");
+    background-image:
+      -webkit-image-set(
+        url("../img/dist/md/#{$header-img}") 1x,
+        url("../img/dist/lg/#{$header-img}") 2x
+      );
+    background-image:
+      image-set(
+        url("../img/dist/md/#{$header-img}") 1x,
+        url("../img/dist/lg/#{$header-img}") 2x
+      );
+    background-size: $banner-md auto;
   }
-  @media
-  (max-width: $banner-md) and
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 120dpi) {
-    background:
-      url("../img/dist/lg/fools_header_banner.jpg") no-repeat center,
-      $dark-navy repeat;
-    background-size: $banner-md auto, contain;
-  }
-  /* Large Screens */
   @media (min-width: $banner-md) and (max-width: $banner-lg) {
-    background:
-      url("../img/dist/lg/fools_header_banner.jpg") no-repeat center,
-      $dark-navy repeat;
-    background-size: $banner-lg auto, contain;
+    background-image: url("../img/dist/lg/#{$header-img}");
+    background-image:
+      -webkit-image-set(
+        url("../img/dist/lg/#{$header-img}") 1x,
+        url("../img/dist/xlg/#{$header-img}") 2x
+      );
+    background-image:
+      image-set(
+        url("../img/dist/lg/#{$header-img}") 1x,
+        url("../img/dist/xlg/#{$header-img}") 2x
+      );
+    background-size: $banner-lg auto;
   }
-  @media (min-width: $banner-md) and (max-width: $banner-lg) and
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 120dpi) {
-    background:
-      url("../img/dist/xlg/fools_header_banner.jpg") no-repeat center,
-      $dark-navy repeat;
-    background-size: $banner-lg auto, contain;
-  }
-  /* Extra large screens */
   @media (min-width: $banner-lg) {
-    background:
-      url("../img/dist/xlg/fools_header_banner.jpg") no-repeat center,
-      $dark-navy repeat;
-    background-size: 100% auto, cover;
+    background-image: url("../img/dist/xlg/#{$header-img}");
+    background-size: 100% auto;
   }
+
+  background-repeat: no-repeat;
+  background-position: center;
 
   color: $pure-white;
   text-align: center;
