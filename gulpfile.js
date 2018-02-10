@@ -13,7 +13,8 @@ var sassOptions = { //sass compiler options
     rootPath = './'; //project root path
 
 gulp.task('sass', function() {
-    var src = path.join(rootPath, './static/', '**', 'scss');
+    var src = path.join(rootPath, '**', 'static/', '**', 'scss');
+    console.log(src);
     return gulp.src(path.join(src, '*.scss'), {base: '.'})
         .pipe(sass(sassOptions).on('error', sass.logError)) // sass to css compilation
         .pipe(autoprefixer()) //  prefixes for cross-browsers compatibility

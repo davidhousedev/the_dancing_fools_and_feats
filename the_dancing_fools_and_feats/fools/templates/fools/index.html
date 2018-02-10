@@ -1,10 +1,13 @@
-<html>
-    <head>
-        <title>The Dancing Fools</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/fools/css/main-styles.css">
-    </head>
-    <body>
+{% extends 'fools/base.html' %}
+{% load static %}
+
+{% block header %}
+    <title>The Dancing Fools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'fools/css/main-styles.css' %}">
+{% endblock %}
+
+{% block content %}
     <header>
         <h1 class="header__site-title">The Dancing Fools</h1>
         <h5 class="header__site-subtitle">Love, light, and dance power</h5>
@@ -71,7 +74,7 @@
         </section>
         <section class="section__this_week">
             <h2>This Week</h2>
-            <img src="static/fools/img/dist/sm/instagram_sample.jpg" />
+            <img src="{% static 'fools/img/dist/sm/instagram_sample.jpg' %}"/>
             <p>
                 You’ve got two chances to burn up the dance floor with us this
                 week: we’ve got our regular dance this Wednesday PLUS our
@@ -126,5 +129,4 @@
             </div>
         </section>
     </main>
-    </body>
-</html>
+{% endblock %}

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    volumes:
+      - ./the_dancing_fools_and_feats:/app
+  static:
+    build:
+      context: .
+      dockerfile: Dockerfile-gulp
+    volumes:
+      - ./the_dancing_fools_and_feats:/project/web

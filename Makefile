@@ -3,12 +3,16 @@ default: develop
 
 .PHONY: build
 build:
-	docker build -f Dockerfile-gulp -t dev_gulp .
+	docker-compose build
 
 .PHONY: develop
 develop: build
-	docker run --rm -d -v $$(pwd)/static:/project/static dev_gulp
+	docker-compose up -d --remove-orphans
+
+.PHONY: logs
+logs:
+	docker-compose logs -f
 
 .PHONY: stop
 stop:
-	-docker kill $$(docker ps -q)
+	docker-compose kill -s SIGINT
