@@ -6,12 +6,15 @@
   div {
     width: 50%;
   }
+  a:not(:last-of-type) {
+    margin-right: 1rem;
+  }
 }
 
 .icon {
   path {
     fill: $off-white;
   }
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
 }

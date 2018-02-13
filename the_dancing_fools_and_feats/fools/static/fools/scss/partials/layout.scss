@@ -1,7 +1,6 @@
 @import 'base';
 
 $gutter-size: 1rem;
-$max-content-width: 1125px;
 
 @mixin section-padding {
   padding: 1rem 0;
@@ -33,7 +32,14 @@ body {
     $gutter-size: auto;
     grid-template-columns:
       [left-edge] $gutter-size
-      [start-main] $max-content-width [end-main]
+      [start-main] 1125px [end-main]
+      $gutter-size [right-edge];
+  }
+  @media (min-width: 1600px) {
+    font-size: 20px;
+    grid-template-columns:
+      [left-edge] $gutter-size
+      [start-main] 1500px [end-main]
       $gutter-size [right-edge];
   }
   grid-template-rows:
@@ -69,6 +75,9 @@ main {
       "who-we-are this-week"
       "west-coast-swing west-coast-swing"
       "location location";
+  }
+  @media (min-width: 1000px) {
+    grid-gap: 2rem;
   }
   @media (min-width: 700px) {
     grid-template-areas:

@@ -40,17 +40,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 
-  color: $pure-white;
-  text-align: center;
-  .header__site-title {
-    font-family: $title-font;
-    font-size: 4rem;
-  }
-
-  .header__site-subtitle {
-    font-size: 1.5rem;
-  }
-
   grid-column: left-edge / right-edge;
   grid-row: start-head / start-nav;
 }

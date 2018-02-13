@@ -19,6 +19,25 @@ h2 {
   @include header-bold;
 }
 
+header {
+  color: $pure-white;
+  text-align: center;
+  .header__site-title {
+    font-family: $title-font;
+    font-size: 3rem;
+    @media (min-width: 800px) {
+      font-size: 5rem;
+    }
+  }
+
+  .header__site-subtitle {
+    font-size: 1.3rem;
+    @media (min-width: 800px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 ul.list--no-bullet {
   padding-left: 0;
   list-style-type: none;
