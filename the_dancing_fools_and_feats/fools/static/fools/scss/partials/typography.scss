@@ -46,3 +46,14 @@ ul.list--no-bullet {
 .header__site-subtitle {
   font-family: $header-font;
 }
+
+.heading--centered {
+  text-align: center;
+}
+
+.heading--subtitle {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  margin-bottom: 1rem;
+}
