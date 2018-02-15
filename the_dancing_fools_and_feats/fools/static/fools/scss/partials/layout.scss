@@ -36,7 +36,7 @@ body {
       $gutter-size [right-edge];
   }
   @media (min-width: 1600px) {
-    font-size: 20px;
+    $gutter-size: auto;
     grid-template-columns:
       [left-edge] $gutter-size
       [start-main] 1500px [end-main]
