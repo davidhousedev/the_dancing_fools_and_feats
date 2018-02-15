@@ -114,6 +114,72 @@ main {
   }
 }
 
+// Grid layout for Classes & Dance
+
+#main-classes-and-dance {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'weekly-classes'
+    'social-dancing';
+  @media (min-width: 560px) and (max-width: 799px) {
+    section {
+      width: 500px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 800px) {
+    grid-template-areas:
+      'weekly-classes social-dancing';
+  }
+}
+
+.section__weekly-classes {
+  grid-area: weekly-classes;
+}
+
+.section__social-dancing {
+  grid-area: social-dancing;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'sd-header'
+    'sd-text-one'
+    'sd-img-one'
+    'sd-text-two'
+    'sd-img-two';
+  @media (min-width: 430px) {
+    p {
+      margin-bottom: 0;
+      align-self: center;
+    }
+    grid-template-areas:
+      'sd-header sd-header'
+      'sd-text-one sd-img-one'
+      'sd-img-two sd-text-two';
+  }
+}
+
+#social-dance-header {
+  grid-area: sd-header;
+}
+
+#social-dance-img-one {
+  grid-area: sd-img-one;
+}
+
+#social-dance-img-two {
+  grid-area: sd-img-two;
+}
+
+#social-dance-text-one {
+  grid-area: sd-text-one;
+}
+
+#social-dance-text-two {
+  grid-area: sd-text-two;
+}
+
 // Responsive iframe css found here:
 // https://benmarshall.me/responsive-iframes/
 .window__container {
