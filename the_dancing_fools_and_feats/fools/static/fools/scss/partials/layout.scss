@@ -149,7 +149,7 @@ main {
     'sd-text-two'
     'sd-img-two';
   @media (min-width: 430px) {
-    p {
+    p, picture {
       margin-bottom: 0;
       align-self: center;
     }
