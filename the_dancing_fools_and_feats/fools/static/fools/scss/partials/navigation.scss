@@ -25,8 +25,12 @@ nav {
       padding-right: 0.5rem;
       display: inline-flex;
       align-self: center;
+      transition: 0.3s;
+      &:hover {
+        color: $burnt-orange;
+      }
     }
-    :first-child {
+    li:first-child {
       &:before {
         content: $nav-separator;
         padding-right: 0.5rem;
