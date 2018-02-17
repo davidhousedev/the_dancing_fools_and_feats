@@ -1,0 +1,24 @@
+{% extends 'fools/base.html' %}
+
+{% block header %}
+    <title>Staff</title>
+{% endblock %}
+
+{% block content %}
+    <section class="section__our_staff" aria-label="Dancing Fools Staff">
+        <div class="card">
+            <picture>
+                {# TODO: Srcset #}
+                <img src="https://placeimg.com/640/640/animals" alt="Staff photo">
+            </picture>
+            <div class="staff-bio">
+                <h3>Puppy Pupperson</h3>
+                <small>Professional Dog</small>
+                <p>
+                    Woof woof I’m a dog woof I like to fetch and dog and woof.
+                    I do dog things for The Dancing Fools.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

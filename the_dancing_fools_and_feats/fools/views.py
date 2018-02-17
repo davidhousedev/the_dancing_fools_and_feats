@@ -5,3 +5,6 @@ class IndexView(TemplateView):
 
 class ClassAndDanceView(TemplateView):
     template_name = 'fools/pages/classes_and_dance.html'
+
+class StaffView(TemplateView):
+    template_name = 'fools/pages/staff.html'
