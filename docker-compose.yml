@@ -13,6 +13,8 @@ services:
       - '8000:8000'
     depends_on:
       - db
+    environment:
+      - GOOGLE_API_KEY=${FEATS_FOOLS_GOOGLE_API_KEY}
 
 volumes:
   postgres-data:

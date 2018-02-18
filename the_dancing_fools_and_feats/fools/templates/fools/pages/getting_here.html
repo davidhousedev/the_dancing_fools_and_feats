@@ -15,7 +15,8 @@
             </div>
             <div class="getting-here-building">
                 <picture class="getting-here-building-image">
-                    <img src="https://placeimg.com/640/640/animals"
+                    <img src="https://maps.googleapis.com/maps/api/streetview?size=1200x1200
+                                {{ STREET_VIEW_PARAMS }}"
                          alt="Dancing fools building">
                 </picture>
                 <p>
@@ -25,7 +26,9 @@
             </div>
             <div class="getting-here-map">
                 <picture class="getting-here-location-map">
-                    <img src="https://placeimg.com/640/640/animals"
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?size=300x300
+                                  &scale=2
+                                  {{ LOCATION_MAP_PARAMS }}"
                          alt="Map to The Dancing Fools">
                 </picture>
                 <p>
@@ -40,10 +43,15 @@
         </section>
         <section class="section__get-here-parking">
             <h2>Parking</h2>
-            <picture class="get-here-parking-map">
-                <img src="https://placeimg.com/640/640/animals"
-                     alt="Map to available parking">
-            </picture>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=50+Hadley+St,Cambridge,MA&travelmode=driving"
+               target="_blank">
+                <picture class="get-here-parking-map">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?&size=300x300
+                                      &scale=2
+                                      {{ PARKING_MAP_PARAMS }}"
+                         alt="Map to available parking">
+                </picture>
+            </a>
             <p>
                 Small blurb about parking, and when it’s available.
                 Click the link below or the image to go to Google maps.
