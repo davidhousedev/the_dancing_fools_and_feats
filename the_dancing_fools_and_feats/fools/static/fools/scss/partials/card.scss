@@ -2,6 +2,7 @@
   background-color: $light-tan;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 1rem;
   margin-bottom: 1rem;
 
@@ -9,5 +10,50 @@
     font-size: 1.4rem;
     width: 100%;
     margin-bottom: 1rem;
+  }
+
+  &__staff {
+    justify-content: center;
+    picture {
+      margin-bottom: 1rem;
+    }
+
+    .staff-bio {
+      h3 {
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      width: 100%;
+    }
+
+    @media (min-width: 395px) {
+      picture {
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+        align-self: flex-end;
+      }
+    }
+
+    @media (min-width: 395px) and (max-width: 719px) {
+      picture {
+        width: calc(40% - 0.5rem);
+      }
+      .staff-bio {
+        width: 60%;
+      }
+    }
+
+    @media (min-width: 720px) {
+      picture {
+        width: calc(30% - 1rem);
+        margin-right: 1rem;
+      }
+      .staff-bio {
+        width: 70%;
+      }
+    }
   }
 }

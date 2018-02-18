@@ -5,20 +5,53 @@
 {% endblock %}
 
 {% block content %}
-    <section class="section__our_staff" aria-label="Dancing Fools Staff">
-        <div class="card">
-            <picture>
-                {# TODO: Srcset #}
-                <img src="https://placeimg.com/640/640/animals" alt="Staff photo">
-            </picture>
-            <div class="staff-bio">
-                <h3>Puppy Pupperson</h3>
-                <small>Professional Dog</small>
-                <p>
-                    Woof woof I’m a dog woof I like to fetch and dog and woof.
-                    I do dog things for The Dancing Fools.
-                </p>
+    <main id="main-staff">
+        <section class="section__our-staff" aria-label="Dancing Fools Staff">
+            <h2>Our Staff</h2>
+            <div class="card card__staff">
+                <picture>
+                    {# TODO: Srcset #}
+                    <img src="https://placeimg.com/640/640/animals" alt="Staff photo">
+                </picture>
+                <div class="staff-bio">
+                    <h3>Puppy Pupperson</h3>
+                    <small>Professional Dog</small>
+                    <p>
+                        Woof woof I’m a dog woof I like to fetch and dog and
+                        woof. I do dog things for The Dancing Fools.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <div class="card card__staff">
+                <picture>
+                    {# TODO: Srcset #}
+                    <img src="https://placeimg.com/640/640/animals" alt="Staff photo">
+                </picture>
+                <div class="staff-bio">
+                    <h3>Woofie Wooferton</h3>
+                    <small>Also a dog</small>
+                    <p>
+                        Woof woof I’m a dog woof I like to fetch and dog and
+                        woof. I do dog things for The Dancing Fools.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card__staff">
+                <picture>
+                    {# TODO: Srcset #}
+                    <img src="https://placeimg.com/640/640/animals" alt="Staff photo">
+                </picture>
+                <div class="staff-bio">
+                    <h3>Meow Meowmeow</h3>
+                    <small>Not a dog</small>
+                    <p>
+                        Meow meow meow meow meow meow meow meow meow meow
+                        meow meow meow. Meow.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 {% endblock %}

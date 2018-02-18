@@ -180,6 +180,24 @@ main {
   grid-area: sd-text-two;
 }
 
+// Grid layout for Staff
+
+#main-staff {
+  display: grid;
+  //grid-gap: 1rem;
+  grid-template-areas:
+    '. our-staff .';
+  //justify-items: center;
+
+  @media (min-width: 650px) {
+    grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  }
+}
+
+.section__our-staff {
+  grid-area: our-staff;
+}
+
 // Responsive iframe css found here:
 // https://benmarshall.me/responsive-iframes/
 .window__container {
