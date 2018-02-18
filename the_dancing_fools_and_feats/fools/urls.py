@@ -8,6 +8,9 @@ urlpatterns = [
     path('staff',
          views.StaffView.as_view(),
          name='fools-staff'),
+    path('getting_here',
+         views.GettingHereView.as_view(),
+         name='fools-getting-here'),
     path('',
          views.IndexView.as_view(),
          name='fools-index')

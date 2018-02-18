@@ -1,0 +1,57 @@
+{% extends 'fools/base.html' %}
+
+{% block header %}
+    <title>Getting to Dancing Fools</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <main id="main-getting-here">
+        <section class="section__get-here-location"
+                 aria-label="Location of Dancing Fools">
+            <div class="heading--centered heading--subtitle">
+                <h2>Location</h2>
+                <address>1950 Massachusetts Ave. Cambridge, MA</address>
+            </div>
+            <div class="getting-here-building">
+                <picture class="getting-here-building-image">
+                    <img src="https://placeimg.com/640/640/animals"
+                         alt="Dancing fools building">
+                </picture>
+                <p>
+                    We’re a welcoming community that meets in a slightly
+                    imposing building.
+                </p>
+            </div>
+            <div class="getting-here-map">
+                <picture class="getting-here-location-map">
+                    <img src="https://placeimg.com/640/640/animals"
+                         alt="Map to The Dancing Fools">
+                </picture>
+                <p>
+                    We’re located next to the T station! Clicking the map
+                    will open google maps at this address. Cool, huh?
+                </p>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=transit"
+               target="_blank">
+                <h4><i class="fas fa-bus"></i>Get Public Transit Directions</h4>
+            </a>
+        </section>
+        <section class="section__get-here-parking">
+            <h2>Parking</h2>
+            <picture class="get-here-parking-map">
+                <img src="https://placeimg.com/640/640/animals"
+                     alt="Map to available parking">
+            </picture>
+            <p>
+                Small blurb about parking, and when it’s available.
+                Click the link below or the image to go to Google maps.
+            </p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=driving"
+               target="_blank">
+                <h4><i class="fas fa-car"></i>Get Driving Directions</h4>
+            </a>
+        </section>
+    </main>
+{% endblock %}

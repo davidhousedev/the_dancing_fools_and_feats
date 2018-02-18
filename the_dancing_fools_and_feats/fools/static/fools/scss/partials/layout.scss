@@ -184,10 +184,8 @@ main {
 
 #main-staff {
   display: grid;
-  //grid-gap: 1rem;
   grid-template-areas:
     '. our-staff .';
-  //justify-items: center;
 
   @media (min-width: 650px) {
     grid-template-columns: 0.1fr 0.8fr 0.1fr;
@@ -196,6 +194,30 @@ main {
 
 .section__our-staff {
   grid-area: our-staff;
+}
+
+// Grid layout for Getting HHere
+
+#main-getting-here {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'get-here-location'
+    'get-here-parking';
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.section__get-here-location {
+  grid-area: get-here-location;
+}
+
+.section__get-here-parking {
+  grid-area: get-here-parking;
 }
 
 // Responsive iframe css found here:

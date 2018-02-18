@@ -8,3 +8,6 @@ class ClassAndDanceView(TemplateView):
 
 class StaffView(TemplateView):
     template_name = 'fools/pages/staff.html'
+
+class GettingHereView(TemplateView):
+    template_name = 'fools/pages/getting_here.html'
