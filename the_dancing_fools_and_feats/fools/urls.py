@@ -12,8 +12,11 @@ urlpatterns = [
          views.GettingHereView.as_view(),
          name='fools-getting-here'),
     path('contact',
-          views.ContactView.as_view(),
-          name='fools-contact'),
+         views.ContactView.as_view(),
+         name='fools-contact'),
+    path('wcs_in_boton',
+         views.WCSInBostonView.as_view(),
+         name='fools-wcs-in-boston'),
     path('',
          views.IndexView.as_view(),
          name='fools-index')

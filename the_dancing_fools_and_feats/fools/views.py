@@ -62,3 +62,7 @@ class GettingHereView(TemplateView, GoogleMapContext):
 
 class ContactView(TemplateView):
     template_name = 'fools/pages/contact.html'
+
+
+class WCSInBostonView(TemplateView):
+    template_name = 'fools/pages/wcs_in_boston.html'
