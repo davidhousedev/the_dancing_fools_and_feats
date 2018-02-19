@@ -11,6 +11,9 @@ urlpatterns = [
     path('getting_here',
          views.GettingHereView.as_view(),
          name='fools-getting-here'),
+    path('contact',
+          views.ContactView.as_view(),
+          name='fools-contact'),
     path('',
          views.IndexView.as_view(),
          name='fools-index')

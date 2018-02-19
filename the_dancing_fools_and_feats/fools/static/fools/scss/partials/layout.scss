@@ -290,6 +290,29 @@ main {
   }
 }
 
+// Layout for Contact Us page
+
+#main-contact {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-areas:
+    'contact-us';
+
+  section {
+    display: inherit;
+    justify-items: inherit;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.section__contact_us {
+  grid-area: contact-us;
+}
+
 // Responsive iframe css found here:
 // https://benmarshall.me/responsive-iframes/
 .window__container {

@@ -58,3 +58,7 @@ class StaffView(TemplateView):
 
 class GettingHereView(TemplateView, GoogleMapContext):
     template_name = 'fools/pages/getting_here.html'
+
+
+class ContactView(TemplateView):
+    template_name = 'fools/pages/contact.html'
