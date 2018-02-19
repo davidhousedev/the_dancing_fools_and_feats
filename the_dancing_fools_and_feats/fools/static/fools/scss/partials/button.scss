@@ -1,0 +1,19 @@
+@import 'base';
+
+.btn {
+  padding: 1rem;
+  border-radius: 5px;
+
+  background-color: $btn-base;
+  border: solid 0.05rem $btn-base-dark;
+
+  &--green {
+    background-color: $btn-green;
+    border-color: $btn-green-dark;
+  }
+
+  &--red {
+    background-color: $btn-red;
+    border-color: $btn-red-dark;
+  }
+}

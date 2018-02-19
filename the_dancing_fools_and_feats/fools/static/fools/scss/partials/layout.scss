@@ -200,7 +200,7 @@ main {
 
 #main-getting-here {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 4rem;
   grid-template-areas:
     'get-here-location'
     'get-here-parking';
@@ -237,7 +237,6 @@ main {
     }
     .heading--align-bottom {
       align-self: flex-end;
-      flex: 0 1 100%;
       text-align: center;
     }
   }
@@ -282,9 +281,12 @@ main {
 .section__get-here-parking {
   grid-area: get-here-parking;
   @media (min-width: 500px) {
-    p, a {
-      flex: 0 0 70%
+    p, .map-link {
+      flex: 0 0 80%;
     }
+  }
+  .map-link img {
+    margin-bottom: 1rem;
   }
 }
 
