@@ -313,6 +313,29 @@ main {
   grid-area: contact-us;
 }
 
+// Layout for WCS in Boston
+
+#main-wcs-in-boston {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas:
+    'boston-social-dance'
+    'dance-weekends';
+
+  @media (min-width: 800px) {
+    grid-template-areas:
+      'boston-social-dance dance-weekends';
+  }
+}
+
+.section__boston-social-dancing {
+  grid-area: boston-social-dance;
+}
+
+.section__dance-weekends {
+  grid-area: dance-weekends;
+}
+
 // Responsive iframe css found here:
 // https://benmarshall.me/responsive-iframes/
 .window__container {

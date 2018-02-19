@@ -6,7 +6,9 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 1rem;
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
 
   h3 {
     font-size: 1.4rem;
@@ -56,6 +58,24 @@
       .staff-bio {
         width: 70%;
       }
+    }
+  }
+
+  &__event {
+    h3, small, p {
+      flex: 1 0 100%;
+    }
+
+    small {
+      margin-bottom: 0.5rem;
+
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
