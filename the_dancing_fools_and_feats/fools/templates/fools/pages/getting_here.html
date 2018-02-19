@@ -9,46 +9,69 @@
     <main id="main-getting-here">
         <section class="section__get-here-location"
                  aria-label="Location of Dancing Fools">
-            <div class="heading--centered heading--subtitle">
+            <div class="heading--centered heading--subtitle heading--align-top">
                 <h2>Location</h2>
                 <address>1950 Massachusetts Ave. Cambridge, MA</address>
             </div>
             <div class="getting-here-building">
-                <picture class="getting-here-building-image">
-                    <img src="https://maps.googleapis.com/maps/api/streetview?size=1200x1200
-                                {{ STREET_VIEW_PARAMS }}"
+                <picture class="getting-here-building-image side left">
+                    <source srcset="{{ G_MAPS_API }}streetview?size=400x400{{ STREET_VIEW_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}streetview?size=800x800{{ STREET_VIEW_PARAMS }} 2x"
+                            media="(min-width: 500px), (max-width: 1199px)">
+                    <source srcset="{{ G_MAPS_API }}streetview?size=800x800{{ STREET_VIEW_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}streetview?size=1600x1600{{ STREET_VIEW_PARAMS }} 2x"
+                            media="(min-width: 1200px), (max-width: 1599px)">
+                    <img src="{{ G_MAPS_API }}streetview?size=1000x1000{{ STREET_VIEW_PARAMS }}"
                          alt="Dancing fools building">
                 </picture>
-                <p>
+                <p class="side">
                     We’re a welcoming community that meets in a slightly
                     imposing building.
                 </p>
             </div>
             <div class="getting-here-map">
-                <picture class="getting-here-location-map">
-                    <img src="https://maps.googleapis.com/maps/api/staticmap?size=300x300
-                                  &scale=2
-                                  {{ LOCATION_MAP_PARAMS }}"
+                <picture class="getting-here-location-map side right">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                            media="(max-width: 799px)">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=80x80&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=160x160&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                            media="(min-width: 800px), (max-width: 1199px)">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=100x100&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=200x200&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                            media="(min-width: 1200px), (max-width: 1599px)">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                            media="(min-width: 1600px)">
+                    <img src="{{ G_MAPS_API }}staticmap?size=1000x1000&scale=2{{ LOCATION_MAP_PARAMS }}"
                          alt="Map to The Dancing Fools">
                 </picture>
-                <p>
+                <p class="side">
                     We’re located next to the T station! Clicking the map
                     will open google maps at this address. Cool, huh?
                 </p>
             </div>
             <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=transit"
-               target="_blank">
+               target="_blank"
+               class="heading--align-bottom">
                 <h4><i class="fas fa-bus"></i>Get Public Transit Directions</h4>
             </a>
         </section>
         <section class="section__get-here-parking">
-            <h2>Parking</h2>
+            <h2 class="heading--align-top">Parking</h2>
             <a href="https://www.google.com/maps/dir/?api=1&destination=50+Hadley+St,Cambridge,MA&travelmode=driving"
                target="_blank">
                 <picture class="get-here-parking-map">
-                    <img src="https://maps.googleapis.com/maps/api/staticmap?&size=300x300
-                                      &scale=2
-                                      {{ PARKING_MAP_PARAMS }}"
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ PARKING_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ PARKING_MAP_PARAMS }} 2x"
+                            media="(max-width: 499px)">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=200x200&scale=1{{ PARKING_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=400x400&scale=2{{ PARKING_MAP_PARAMS }} 2x"
+                            media="(min-width: 500px), (max-width: 799px)">
+                    <source srcset="{{ G_MAPS_API }}staticmap?size=125x125&scale=1{{ PARKING_MAP_PARAMS }} 1x,
+                                    {{ G_MAPS_API }}staticmap?size=250x250&scale=2{{ PARKING_MAP_PARAMS }} 2x"
+                            media="(min-width: 800px), (max-width: 1199px)">
+                    <img src="{{ G_MAPS_API }}staticmap?&size=300x300&scale=2{{ PARKING_MAP_PARAMS }}"
                          alt="Map to available parking">
                 </picture>
             </a>
@@ -56,8 +79,10 @@
                 Small blurb about parking, and when it’s available.
                 Click the link below or the image to go to Google maps.
             </p>
+
             <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=driving"
-               target="_blank">
+               target="_blank"
+               class="heading--align-bottom">
                 <h4><i class="fas fa-car"></i>Get Driving Directions</h4>
             </a>
         </section>

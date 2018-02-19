@@ -204,20 +204,88 @@ main {
   grid-template-areas:
     'get-here-location'
     'get-here-parking';
+  @media (min-width: 800px) {
+    grid-gap: 2rem;
+    grid-template-areas:
+      'get-here-location get-here-parking';
+    section {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 1200px) {
+    grid-gap: 2rem;
+  }
 
   section {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    h2, h4 {
+      flex: 0 1 100%;
+    }
+    div:not(:nth-of-type(0)) { // Not section title
+      display: inherit;
+      flex-wrap: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+      margin-bottom: 1rem;
+    }
+
+    .heading--align-top {
+      align-self: flex-start;
+    }
+    .heading--align-bottom {
+      align-self: flex-end;
+      flex: 0 1 100%;
+      text-align: center;
+    }
+  }
+
+  picture {
+    margin-bottom: 1rem;
   }
 }
 
 .section__get-here-location {
   grid-area: get-here-location;
+  @media (min-width: 500px) {
+    picture {
+      flex: 0 1 calc(50% - 1rem);
+      margin-bottom: 0;
+      &.left {
+        margin-right: 1rem;
+        order: -1;
+      }
+      &.right {
+        margin-left: 1rem;
+        order: 2;
+      }
+    }
+    p {
+      flex: 0 1 50%;
+    }
+    div {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 600px) {
+    picture {
+      flex: 1 0 calc(30% - 1rem);
+    }
+    p {
+      flex: 0 1 calc(60% - 1rem);
+    }
+  }
 }
 
 .section__get-here-parking {
   grid-area: get-here-parking;
+  @media (min-width: 500px) {
+    p, a {
+      flex: 0 0 70%
+    }
+  }
 }
 
 // Responsive iframe css found here:

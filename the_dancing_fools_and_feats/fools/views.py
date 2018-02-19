@@ -4,6 +4,7 @@ from django.conf import settings
 
 
 class GoogleMapContext(ContextMixin):
+    GOOGLE_API_BASE = 'https://maps.googleapis.com/maps/api/'
     GOOGLE_MAP_ADDRESS = 'The+Cambridge+Masonic+Hall,Cambridge,MA'
     MAP_API_KEY = f'&key={settings.GOOGLE_API_KEY}'
     FOOLS_MARKER = f'&markers=color:red%7C{GOOGLE_MAP_ADDRESS}'
@@ -38,6 +39,7 @@ class GoogleMapContext(ContextMixin):
             'LOCATION_MAP_PARAMS':
                 f'{self.MAP_PARAMS_BASE}{self.PORTER_SQUARE_VISIBLE}',
             'STREET_VIEW_PARAMS': self.STREET_VIEW_PARAMS,
+            'G_MAPS_API': self.GOOGLE_API_BASE
         })
         return context
 
