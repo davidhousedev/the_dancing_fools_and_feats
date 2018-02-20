@@ -232,12 +232,21 @@ main {
     h2, h4 {
       flex: 0 1 100%;
     }
-    div:not(:nth-of-type(0)) { // Not section title
+    div:not(:first-of-type) { // Not section title
       display: inherit;
-      flex-wrap: inherit;
       align-items: inherit;
+      flex-wrap: wrap;
       justify-content: inherit;
+    }
+
+    div {
       margin-bottom: 1rem;
+    }
+
+    @media (min-width: 500px) {
+      div:not(:first-of-type) {
+        flex-wrap: nowrap;
+      }
     }
 
     .heading--align-top {
@@ -257,18 +266,19 @@ main {
 .section__get-here-location {
   grid-area: get-here-location;
   @media (min-width: 500px) {
-    picture {
+    picture, a {
       flex: 0 1 calc(50% - 1rem);
       margin-bottom: 0;
-      &.left {
-        margin-right: 1rem;
-        order: -1;
-      }
-      &.right {
-        margin-left: 1rem;
-        order: 2;
-      }
     }
+    .left {
+      margin-right: 1rem;
+      order: -1;
+    }
+    .right {
+      margin-left: 1rem;
+      order: 2;
+    }
+
     p {
       flex: 0 1 50%;
     }

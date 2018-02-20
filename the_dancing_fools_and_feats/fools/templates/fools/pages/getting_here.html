@@ -30,36 +30,40 @@
                 </p>
             </div>
             <div class="getting-here-map">
-                <picture class="getting-here-location-map side right">
-                    <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
-                                    {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
-                            media="(max-width: 799px)">
-                    <source srcset="{{ G_MAPS_API }}staticmap?size=80x80&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
-                                    {{ G_MAPS_API }}staticmap?size=160x160&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
-                            media="(min-width: 800px) and (max-width: 1199px)">
-                    <source srcset="{{ G_MAPS_API }}staticmap?size=100x100&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
-                                    {{ G_MAPS_API }}staticmap?size=200x200&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
-                            media="(min-width: 1200px) and (max-width: 1599px)">
-                    <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
-                                    {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
-                            media="(min-width: 1600px)">
-                    <img src="{{ G_MAPS_API }}staticmap?size=1000x1000&scale=2{{ LOCATION_MAP_PARAMS }}"
-                         alt="Map to The Dancing Fools">
-                </picture>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall"
+                    target="_blank"
+                    class="side right">
+                    <picture class="getting-here-location-map">
+                        <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                        {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                                media="(max-width: 799px)">
+                        <source srcset="{{ G_MAPS_API }}staticmap?size=80x80&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                        {{ G_MAPS_API }}staticmap?size=160x160&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                                media="(min-width: 800px) and (max-width: 1199px)">
+                        <source srcset="{{ G_MAPS_API }}staticmap?size=100x100&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                        {{ G_MAPS_API }}staticmap?size=200x200&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                                media="(min-width: 1200px) and (max-width: 1599px)">
+                        <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                        {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                                media="(min-width: 1600px)">
+                        <img src="{{ G_MAPS_API }}staticmap?size=1000x1000&scale=2{{ LOCATION_MAP_PARAMS }}"
+                             alt="Map to The Dancing Fools">
+                    </picture>
+                </a>
                 <p class="side">
                     We’re located next to the T station! Clicking the map
                     will open google maps at this address. Cool, huh?
                 </p>
             </div>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=transit"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall"
                target="_blank"
                class="btn btn--green heading--align-bottom">
-                <h4><i class="fas fa-bus"></i>Get Public Transit Directions</h4>
+                <h4><i class="fas fa-map"></i>Get Directions</h4>
             </a>
         </section>
         <section class="section__get-here-parking">
             <h2 class="heading--align-top">Parking</h2>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=50+Hadley+St,Cambridge,MA&travelmode=driving"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=50+Hadley+St,Cambridge,MA"
                target="_blank"
                class="map-link">
                 <picture class="get-here-parking-map">
@@ -81,10 +85,10 @@
                 Click the link below or the image to go to Google maps.
             </p>
 
-            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall&travelmode=driving"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=50+Hadley+St,Cambridge,MA&travelmode=driving"
                target="_blank"
                class="btn btn--green heading--align-bottom">
-                <h4><i class="fas fa-car"></i>Get Driving Directions</h4>
+                <h4><i class="fas fa-car"></i>Get Directions to Parking</h4>
             </a>
         </section>
     </main>
