@@ -44,7 +44,7 @@ class GoogleMapContext(ContextMixin):
         return context
 
 
-class IndexView(TemplateView):
+class IndexView(TemplateView, GoogleMapContext):
     template_name = 'fools/pages/index.html'
 
 

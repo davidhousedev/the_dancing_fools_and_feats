@@ -3,6 +3,7 @@
 
 {% block header %}
     <title>The Dancing Fools</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -16,6 +17,7 @@
                 <li>Social Dancing 9pm-12am</li>
                 <li>$10 general admission</li>
                 <li>$5 students with ID</li>
+                <li>Cash Only</li>
             </ul>
         </section>
         <section class="section__this_week">
@@ -68,11 +70,34 @@
             </div>
         </section>
         <section class="section__location">
-            <h2 class="header__section_header">Location</h2>
-            <div class="window__container window__container--square">
-                <iframe src="https://www.google.com/maps/d/u/1/embed?mid=117MCZ_rW5byXmQnjXghzfYXybehIuQbA">
-                </iframe>
+            <div class="heading--centered heading--subtitle heading--align-top">
+                <h2>Location</h2>
+                <address>1950 Massachusetts Ave. Cambridge, MA</address>
             </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall"
+               target="_blank">
+            <picture class="getting-here-location-map side right">
+                <source srcset="{{ G_MAPS_API }}staticmap?size=150x150&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                {{ G_MAPS_API }}staticmap?size=300x300&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                        media="(max-width: 499px)">
+                <source srcset="{{ G_MAPS_API }}staticmap?size=225x225&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                {{ G_MAPS_API }}staticmap?size=450x450&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                        media="(min-width: 500px) and (max-width: 699px)">
+                <source srcset="{{ G_MAPS_API }}staticmap?size=175x175&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                {{ G_MAPS_API }}staticmap?size=350x350&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                        media="(min-width: 700px) and (max-width: 1599px)">
+                <source srcset="{{ G_MAPS_API }}staticmap?size=250x250&scale=1{{ LOCATION_MAP_PARAMS }} 1x,
+                                {{ G_MAPS_API }}staticmap?size=500x500&scale=2{{ LOCATION_MAP_PARAMS }} 2x"
+                        media="(min-width: 1600px)">
+                <img src="{{ G_MAPS_API }}staticmap?size=1000x1000&scale=2{{ LOCATION_MAP_PARAMS }}"
+                     alt="Map to The Dancing Fools">
+            </picture>
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Cambridge+Masonic+Hall"
+               target="_blank"
+               class="btn btn--green">
+                <h4><i class="fas fa-map"></i>Get Directions</h4>
+            </a>
         </section>
     </main>
 {% endblock %}

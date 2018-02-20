@@ -106,6 +106,14 @@ main {
 
 .section__location {
   grid-area: location;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    margin-top: 1rem;
+  }
 }
 
 .section__this_week {
