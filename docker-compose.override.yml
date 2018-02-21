@@ -2,6 +2,8 @@ version: '3'
 
 services:
   web:
+    environment:
+      - "DJANGO_SETTINGS_MODULE=the_dancing_fools_and_feats.local"
     volumes:
       - ./the_dancing_fools_and_feats:/app
   static:

@@ -20,13 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bv+#ma2bh38f-&l-w=f!7)prkx2vd&anr@grjas^=$)*l+9x=x'
+SECRET_KEY = 'local-secret'
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', 'google-api-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '.ngrok.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,15 +75,7 @@ WSGI_APPLICATION = 'the_dancing_fools_and_feats.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
-    }
-}
+DATABASES = {}
 
 
 # Password validation
