@@ -6,6 +6,7 @@ services:
       - "DJANGO_SETTINGS_MODULE=the_dancing_fools_and_feats.local"
     volumes:
       - ./the_dancing_fools_and_feats:/app
+    command: ['python', 'manage.py', 'runserver', '0.0.0.0:8000']
   static:
     build:
       context: .
