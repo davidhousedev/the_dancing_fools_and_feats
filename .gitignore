@@ -136,3 +136,6 @@ node_modules/
 # css  # Temporarily disabled while hosting on github pages
 package-lock.json
 # dist  # Temporarily disabled while hosting on github pages
+
+# test
+.pytest_cache
