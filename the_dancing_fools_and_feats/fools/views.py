@@ -2,6 +2,8 @@ from django.views.generic import TemplateView
 from django.views.generic.base import ContextMixin
 from django.conf import settings
 
+from .models import WeeklyEvent, MonthlyEvent, YearlyEvent
+
 
 class GoogleMapContext(ContextMixin):
     GOOGLE_API_BASE = 'https://maps.googleapis.com/maps/api/'
@@ -66,3 +68,22 @@ class ContactView(TemplateView):
 
 class WCSInBostonView(TemplateView):
     template_name = 'fools/pages/wcs_in_boston.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # retrieve all dance events
+        weekly_events = WeeklyEvent.objects.all()
+        monthly_events = MonthlyEvent.objects.all()
+        # combine monthly and weekly events into a combined list
+        regular_events = [*list(weekly_events), *list(monthly_events)]
+        regular_events.sort(key=lambda evt: evt.order)
+
+        yearly_events = YearlyEvent.objects.all()
+
+        context.update({
+            'regular_events': regular_events,
+            'yearly_events': yearly_events,
+        })
+
+        return context
