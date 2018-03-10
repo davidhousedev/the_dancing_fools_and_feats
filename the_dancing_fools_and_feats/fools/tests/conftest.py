@@ -1,4 +1,5 @@
 import datetime
+from random import randrange
 
 import pytest
 
@@ -10,6 +11,7 @@ EVENT_KWARGS = {
     'website_url': 'https://foo.bar.baz',
     'location': 'Location, ZZ',
     'description': 'Generic description of this event',
+    'order': randrange(1, 10),
 }
 
 
