@@ -1,8 +1,15 @@
+import re
+import logging
+
+from bs4 import BeautifulSoup
 from django.views.generic import TemplateView
 from django.views.generic.base import ContextMixin
 from django.conf import settings
+import requests
 
 from .models import WeeklyEvent, MonthlyEvent, YearlyEvent
+
+logger = logging.getLogger(__name__)
 
 
 class GoogleMapContext(ContextMixin):
@@ -48,6 +55,46 @@ class GoogleMapContext(ContextMixin):
 
 class IndexView(TemplateView, GoogleMapContext):
     template_name = 'fools/pages/index.html'
+
+    def get_context_data(self, **kwargs):
+        """
+        In order to display the most recent instagram post from The Dancing
+        Fools, a brittle hack needs to be implemented to get around significant
+        restrictions of the Instagram API. It does not allow deterministic
+        retrieval of recent post IDs without significant authentication
+        overhead.
+
+        This method sends a request to The Dancing Fools' Instagram page,
+        and parses the returned JSX for the first instance of an attribute
+        associated with post ids, `shortcode`. The ID is then read from
+
+        Due to the high probability of this breaking at any time, it will
+        fail silently very easily. In this case, the instagram post will not
+        display on the main page.
+        """
+        context = super().get_context_data(**kwargs)
+
+        # TODO: Make error handling more robust, log and alert on failures
+        try:
+            body = requests.get('https://www.instagram.com/thedancingfools/')
+            soup = BeautifulSoup(body.text, 'html.parser')
+            # find first occurrence of an instagram post ID, then parse
+            # the id's value
+            match = re.search(r'"shortcode":"\w+"', soup.text)
+            if not match.group():
+                return context
+            post_id = match.group().split(':')[1].strip('"')
+            resp = requests.get(f'https://api.instagram.com/oembed'
+                                f'?url=http://instagr.am/p/{post_id}/')
+            json_resp = resp.json()
+
+            if json_resp.get('html', None):
+                context['instagram_embed'] = json_resp['html']
+        except Exception as err:
+            logger.error('Failed to retrieve instagram post for index!')
+            logger.exception(err)
+
+        return context
 
 
 class ClassAndDanceView(TemplateView):

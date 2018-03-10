@@ -20,18 +20,12 @@
                 <li>Cash Only</li>
             </ul>
         </section>
+        {% if instagram_embed %}
         <section class="section__this_week">
             <h2>This Week</h2>
-            <img src="{% static 'fools/img/dist/sm/instagram_sample.jpg' %}"/>
-            <p>
-                You’ve got two chances to burn up the dance floor with us this
-                week: we’ve got our regular dance this Wednesday PLUS our
-                sister dance in Newton on Saturday! Our beginner lesson
-                topics on Wednesday are right side passes and push breaks
-                (no experience required). The intermediate lesson topic is
-                whips. For the advanced lesson topics, please come to class!
-            </p>
+            {{ instagram_embed | safe }}
         </section>
+        {% endif %}
         <section class="section__who_we_are">
             <h2 class="header__section_header">Who We Are</h2>
             <p>
